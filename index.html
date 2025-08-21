@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sentiment Analyzer Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 h-screen">
+    <div class="container mx-auto px-4 h-full flex flex-col">
+        <!-- Header -->
+        <header class="py-4">
+            <h1 class="text-2xl font-bold text-gray-800">AI Sentiment Analyzer</h1>
+            <p class="text-gray-600">Analyze text and brand sentiment with AI</p>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="flex-1 bg-white rounded-lg shadow-lg p-4 mb-4 overflow-hidden flex flex-col">
+            <!-- Chat Messages -->
+            <div id="chat-messages" class="flex-1 overflow-y-auto mb-4 space-y-4">
+                <!-- Welcome Message -->
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
+                            <i class="fas fa-robot text-white"></i>
+                        </div>
+                    </div>
+                    <div class="ml-3 bg-blue-100 rounded-lg p-3 max-w-[80%]">
+                        <p class="text-sm text-gray-800">
+                            Hello! I'm your AI Sentiment Analyzer. I can help you analyze text sentiment and brand mentions. 
+                            Try saying something like "Analyze this text: I love this product!" or "Check sentiment for brand: Apple"
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="border-t pt-4">
+                <div class="flex space-x-4">
+                    <input type="text" 
+                           id="user-input" 
+                           class="flex-1 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                           placeholder="Type your message here...">
+                    <button id="send-button" 
+                            class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html> 
